@@ -10,7 +10,6 @@ users = {
 
 @app.get("/users/{user_id}")
 def get_user(user_id: int):
-  # VULNERABILITY
   user = users.get(user_id)
 
   if user is None:
